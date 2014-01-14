@@ -44,9 +44,11 @@ settings.JSHINT_DEV_SETTINGS = _.extend({
     "globals" : {
       "requirejs" : true,
       "describe"  : true,
+      "console"   : true,
       "define"    : true,
       "expect"    : true,
       "window"    : true,
+      "alert"     : true,
       "it"        : true
     }
   }, settings.JSHINT_BASE_SETTINGS);
