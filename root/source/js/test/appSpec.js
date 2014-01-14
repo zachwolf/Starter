@@ -1,4 +1,4 @@
-define(["app"], function(App) {
+define(["{%= primary_js_name %}"], function(App) {
 
   "use strict";
 

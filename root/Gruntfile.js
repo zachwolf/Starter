@@ -68,10 +68,10 @@ module.exports = function(grunt) {
     requirejs: {
       compile: {
         options: {
-          name: "app",
+          name: "{%= primary_js_name %}",
           baseUrl: SETTINGS.SCRIPT_SOURCE_PATH,
-          mainConfigFile: SETTINGS.SCRIPT_SOURCE_PATH + "/app.js",
-          out: SETTINGS.SCRIPT_BUILD_PATH + "/app.js"
+          mainConfigFile: SETTINGS.SCRIPT_SOURCE_PATH + "/{%= primary_js_name %}.js",
+          out: SETTINGS.SCRIPT_BUILD_PATH + "/{%= primary_js_name %}.js"
         }
       }
     },
