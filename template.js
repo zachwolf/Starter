@@ -7,7 +7,7 @@
  */
 
 // Basic template description.
-exports.description = 'Starting point for quick spin up of a project';
+exports.description = 'Starting point for a project using Require.js, Jasmine/Karma, SCSS & HAML';
 
 // Template-specific notes to be displayed before question prompts.
 // exports.notes = '';
@@ -29,23 +29,17 @@ exports.template = function(grunt, init, done) {
   "use strict";
 
   init.process({}, [
-    // init.prompt('fuck_you', ["no", "yes", "ok"])
     // Prompt for these values.
+    init.prompt('name'),
+    init.prompt('title'),
+    init.prompt('description'),
+    init.prompt('version'),
+    init.prompt('repository'),
+    init.prompt('author_name'),
+    init.prompt('author_email'),
+    init.prompt('author_url'),
     init.prompt('primary_js_name', "app"),
-    init.prompt('primary_css_name', "app"),
-
-    // init.prompt('name'),
-    // init.prompt('title', "default"),
-    // init.prompt('description', 'The best jQuery plugin ever.'),
-    // init.prompt('version'),
-    // init.prompt('repository'),
-    // init.prompt('homepage'),
-    // init.prompt('bugs'),
-    // init.prompt('licenses', 'MIT'),
-    // init.prompt('author_name'),
-    // init.prompt('author_email'),
-    // init.prompt('author_url'),
-    // init.prompt('jquery_version')
+    init.prompt('primary_css_name', "app")
   ], function(err, props) {
     // A few additional properties.
     // props.jqueryjson = props.name + '.jquery.json';
@@ -62,35 +56,11 @@ exports.template = function(grunt, init, done) {
     console.log("files", files);
     console.log("done");
     console.log("-------------------------------------------------");
-    // // Add properly-named license files.
+    // Add properly-named license files.
     // init.addLicenseFiles(files, props.licenses);
 
-    // // Actually copy (and process) files.
+    // Actually copy (and process) files.
     init.copyAndProcess(files, props, {noProcess: 'source/js/lib/**'});
-
-    // // Generate package.json file, used by npm and grunt.
-    // init.writePackageJSON('package.json', {
-    //   name: 'jquery-plugin',
-    //   version: '0.0.0-ignored',
-    //   npm_test: 'grunt qunit',
-    //   // TODO: pull from grunt's package.json
-    //   node_version: '>= 0.8.0',
-    //   devDependencies: {
-    //     'grunt-contrib-jshint': '~0.1.1',
-    //     'grunt-contrib-qunit': '~0.1.1',
-    //     'grunt-contrib-concat': '~0.1.2',
-    //     'grunt-contrib-uglify': '~0.1.1',
-    //     'grunt-contrib-watch': '~0.2.0',
-    //     'grunt-contrib-clean': '~0.4.0',
-    //   },
-    // });
-
-    // // Generate jquery.json file.
-    // init.writePackageJSON(props.jqueryjson, props, function(pkg, props) {
-    //   // The jQuery site needs the "bugs" value as a string.
-    //   if ('bugs' in props) { pkg.bugs = props.bugs; }
-    //   return pkg;
-    // });
 
     // All done!
     done();
