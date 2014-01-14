@@ -1,0 +1,5 @@
+{
+  "source/js/app.js": "source/js/{%= primary_js_name %}.js",
+  "source/js/test/appSpec.js": "source/js/test/{%= primary_js_name %}Spec.js",
+  "source/style/app.scss": "source/style/{%= primary_css_name %}.scss"
+}
