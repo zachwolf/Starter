@@ -1,6 +1,6 @@
 # Starter
 
-> Starting point for quick spin up of a project using [grunt-init][].
+> Starting point for quick spin up of a project using [grunt-init][], Require.js, Jasmine/Karma, & SCSS/Compass.
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
