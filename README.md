@@ -23,5 +23,6 @@ grunt-init Starter
 
 _Note that this template will generate files in the current directory, so be sure to change to a new directory first if you don't want to overwrite existing files._
 
+***
 
 Grunt-init template based on [grunt-init-jquery](https://github.com/gruntjs/grunt-init-jquery)
