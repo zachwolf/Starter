@@ -1,5 +1,4 @@
 {
-  "source/js/app.js": "source/js/{%= primary_js_name %}.js",
-  "source/js/test/appSpec.js": "source/js/test/{%= primary_js_name %}Spec.js",
-  "source/style/app.scss": "source/style/{%= primary_css_name %}.scss"
+  "webapp/controllers/post": "webapp/controllers/{%= primary_route_name %}",
+  "webapp/views/post": "webapp/views/{%= primary_route_name %}"
 }

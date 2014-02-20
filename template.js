@@ -38,8 +38,7 @@ exports.template = function(grunt, init, done) {
     init.prompt('author_name'),
     init.prompt('author_email'),
     init.prompt('author_url'),
-    init.prompt('primary_js_name', "app"),
-    init.prompt('primary_css_name', "app")
+    init.prompt('primary_route_name', "post"),
   ], function(err, props) {
     // A few additional properties.
     // props.jqueryjson = props.name + '.jquery.json';
