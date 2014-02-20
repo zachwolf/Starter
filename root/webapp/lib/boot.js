@@ -1,5 +1,3 @@
-
-// var express = require('../../..')
 var express = require('express')
   , fs = require('fs')
   , normalizePath = require('path').normalize;
@@ -7,6 +5,11 @@ var express = require('express')
 module.exports = function(parent, options){
   var verbose = options.verbose;
   fs.readdirSync(__dirname + '/../controllers').forEach(function(name){
+    // ignore .files
+    if ( (/^\./).test(name) ) {
+      return;
+    }
+
     verbose && console.log('\n   %s:', name);
     var obj = require('./../controllers/' + name)
       , name = obj.name || name
